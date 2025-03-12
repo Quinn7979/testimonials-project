@@ -33,7 +33,7 @@ function sortTestimonials(testimonials, sortType) {
 			});
 			break;
 	}
-	return sortTestimonials;
+	return sortedTestimonials;
 }
 
 module.exports = sortTestimonials;

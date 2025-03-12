@@ -13,7 +13,7 @@ describe("sortTestimonial", () => {
 			{ feedback: "Incredible! Just amazing...", rating: 5 },
 			{ feedback: "That one guy was too funny for me to concentrate", rating: 0 },
 		];
-		const actualSorting = sortTestimonials(unsortedTestimonials, "ratingDesc");
+		const actualSorting = sortTestimonials(unsortedTestimonials, "nameAsc");
 		expect(actualSorting).toEqual(expectedSorting);
 	});
 
@@ -23,7 +23,7 @@ describe("sortTestimonial", () => {
 			{ feedback: "At least it was cheap...", rating: 3 },
 			{ feedback: "That one guy was too funny for me to concentrate", rating: 0 },
 		];
-		const actualSorting = sortTestimonials(unsortedTestimonials, "ratingAsc");
+		const actualSorting = sortTestimonials(unsortedTestimonials, "ratingDesc");
 		expect(actualSorting).toEqual(expectedSorting);
 	});
 
@@ -34,8 +34,8 @@ describe("sortTestimonial", () => {
 			{ feedback: "Incredible! Just amazing...", rating: 5 },
 		];
 
-		const actualSorting = sortTestimonials(unsortedTestimonials, "nameAsc");
-
+		const actualSorting = sortTestimonials(unsortedTestimonials, "ratingAsc");
+		console.info("hello");
 		console.log(actualSorting);
 		expect(actualSorting).toEqual(expectedSorting);
 	});
