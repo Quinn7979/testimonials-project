@@ -1,12 +1,12 @@
 <html>
-
 <?php
 require_once("initialize.php");
 
 $feedback = $_POST["feedback"];
 $rating = $_POST["rating"];
 
-$sql = "INSERT INTO testimonials (feedback, rating) values (\"$feedback\", \"$rating\")";
+$sql = "INSERT INTO testimonials (feedback, rating) 
+        values (\"$feedback\", \"$rating\")";
 
 $result = mysqli_query($connection, $sql);
 

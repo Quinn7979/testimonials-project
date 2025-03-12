@@ -1,3 +1,5 @@
+import generateTestimonial from "../../util/generate-testimonial";
+
 describe("testimonials", () => {
 	it("list testimonials", () => {
 		cy.visit("localhost/testimonials-project");
@@ -11,8 +13,14 @@ describe("testimonials", () => {
 
 		cy.get("form").should("be.visible");
 
-		const testFeedback = "Example feedback";
-		const testRating = 5;
+		const fakeTestimonial = generateTestimonial();
+		//const { feedback: testFeedback, rating: testRating } = fakeTestimonial;
+
+		const testFeedback = fakeTestimonial.feedback;
+		const testRating = fakeTestimonial.rating;
+
+		//const testFeedback = "Example feedback";
+		//const testRating = 5;
 		cy.get("form input[name=feedback]").type(testFeedback);
 		cy.get("form input[name=rating]").type(testRating);
 
