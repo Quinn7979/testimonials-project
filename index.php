@@ -13,8 +13,16 @@ require_once("initialize.php");
             echo $result["feedback"], ' ', $result["rating"], '/5';
             echo"</li>";
         }
-       
         ?>
     </ul>
+
+    <form action="create.php" method="POST">
+        <label for="feedback">Feedback:</label>
+        <input name="feedback" type="text">
+        <label for="rating">Rating:</label>
+        <input name="rating" type="number" min="0" max="5">
+        
+        <input type="submit">
+    </form>
 
 </html>
